@@ -3,26 +3,26 @@
   $(function() {
     if ($("#order-chart").length) {
       var areaData = {
-        labels: ["10","","","20","","","30","","","40","","", "50","","", "60","","","70"],
+        labels: ["2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022"],
         datasets: [
           {
-            data: [200, 480, 700, 600, 620, 350, 380, 350, 850, "600", "650", "350", "590", "350", "620", "500", "990", "780", "650"],
+            data: [800, 785, 720, 700, 665, 633, 600, 590, 550, 500, 520],
             borderColor: [
               '#4747A1'
             ],
             borderWidth: 2,
-            fill: false,
+            fill: true,
             label: "Orders"
           },
-          {
-            data: [400, 450, 410, 500, 480, 600, 450, 550, 460, "560", "450", "700", "450", "640", "550", "650", "400", "850", "800"],
-            borderColor: [
-              '#F09397'
-            ],
-            borderWidth: 2,
-            fill: false,
-            label: "Downloads"
-          }
+          // {
+          //   data: [400, 450, 410, 500, 480, 600, 450, 550, 460, "560", "450", "700", "450", "640", "550", "650", "400", "850", "800"],
+          //   borderColor: [
+          //     '#F09397'
+          //   ],
+          //   borderWidth: 2,
+          //   fill: false,
+          //   label: "Downloads"
+          // }
         ]
       };
       var areaOptions = {
@@ -182,15 +182,15 @@
       var SalesChart = new Chart(SalesChartCanvas, {
         type: 'bar',
         data: {
-          labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+          labels: ["Jun", "Jly", "Aug", "Sep", "Oct"],
           datasets: [{
-              label: 'Offline Sales',
-              data: [480, 230, 470, 210, 330],
+              label: '2022',
+              data: [480, 430, 470, 480, 330],
               backgroundColor: '#98BDFF'
             },
             {
-              label: 'Online Sales',
-              data: [400, 340, 550, 480, 170],
+              label: '2023',
+              data: [400, 340, 320, 210, 170],
               backgroundColor: '#4B49AC'
             }
           ]
@@ -257,7 +257,7 @@
       var SalesChart = new Chart(SalesChartCanvas, {
         type: 'bar',
         data: {
-          labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+          labels: ["Jun", "Jly", "Aug", "Sep", "Oct"],
           datasets: [{
               label: 'Offline Sales',
               data: [480, 230, 470, 210, 330],
