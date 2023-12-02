@@ -22,6 +22,7 @@
   <link rel="shortcut icon" href="images/favicon.png" />
 </head>
 <body>
+
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
@@ -117,7 +118,9 @@
       </div>
     </nav>
     <!-- partial -->
+
     <div class="container-fluid page-body-wrapper">
+      
       <!-- partial:partials/_settings-panel.html -->
       <div id="right-sidebar" class="settings-panel">
         <i class="settings-close ti-close"></i>
@@ -172,63 +175,45 @@
         </div>
       </div>
       <!-- partial -->
-      <!-- partial:partials/_sidebar.html -->
+
+      <!-- Sidebar Partial -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
+
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="./index.html">
               <i class="icon-grid menu-icon"></i>
               <span class="menu-title">Dashboard</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
-              <i class="icon-columns menu-icon"></i>
-              <span class="menu-title">Form elements</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="form-elements">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Basic Elements</a></li>
-              </ul>
-            </div>
-          </li>
+
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
               <i class="icon-bar-graph menu-icon"></i>
-              <span class="menu-title">Charts</span>
+              <span class="menu-title">Analytics</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="charts">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">ChartJs</a></li>
+                <li class="nav-item"> <a class="nav-link" href="./pages/charts/chartjs.html"> User Graphs </a></li>
               </ul>
             </div>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
               <i class="icon-grid-2 menu-icon"></i>
-              <span class="menu-title">Tables</span>
+              <span class="menu-title"> Data </span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="tables">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Basic table</a></li>
+                <li class="nav-item"> <a class="nav-link" href="./pages/tables/basic-table.html"> Users </a></li>
               </ul>
             </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
-              <i class="icon-contract menu-icon"></i>
-              <span class="menu-title">Icons</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="icons">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/icons/mdi.html">Mdi icons</a></li>
-              </ul>
-            </div>
-          </li>
+
+
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="icon-head menu-icon"></i>
@@ -237,11 +222,12 @@
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
+                <li class="nav-item"> <a class="nav-link" href="./pages/samples/login.html"> Login </a></li>
+                <li class="nav-item"> <a class="nav-link" href="./pages/samples/register.html"> Register </a></li>
               </ul>
             </div>
           </li>
+<<<<<<< HEAD
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#Contact_Us" aria-expanded="false" aria-controls="Contact_Us">
               <i class="icon-columns menu-icon"></i>
@@ -254,9 +240,29 @@
               </ul>
             </div>
           </li>
+=======
+
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
+              <i class="icon-ban menu-icon"></i>
+              <span class="menu-title">Error pages</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="error">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/error-404.html"> 404 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/error-500.html"> 500 </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+          </li>
+          
+>>>>>>> 435be21862295c3c9154f51c40eaa6f04e9006b8
         </ul>
       </nav>
-      <!-- partial -->
+      <!-- /Sidebar Partial -->
+
       <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">
@@ -364,7 +370,7 @@
               </div>
             </div>
           </div>
-          <div class="row">
+          <!-- <div class="row">
             <div class="col-md-12 grid-margin stretch-card">
               <div class="card position-relative">
                 <div class="card-body">
@@ -543,7 +549,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <div class="row">
             <div class="col-md-7 grid-margin stretch-card">
               <div class="card">
@@ -566,43 +572,43 @@
                           <td>EcoCycle Solutions</td>
                           <td class="font-weight-bold">Queensland</td>
                           <td>Australia</td>
-                          <td class="font-weight-medium"><div class="badge badge-success">Completed</div></td>
+                          <td class="font-weight-medium"><a href="http://example.com/12345">http://example.com/12345</a></div></td>
                         </tr>
                         <tr>
                           <td>TerraPlast Renewables</td>
                           <td class="font-weight-bold">Bavaria</td>
                           <td>Germany</td>
-                          <td class="font-weight-medium"><div class="badge badge-success">Completed</div></td>
+                          <td class="font-weight-medium"><a href="http://dummylink.net/abcdef">http://dummylink.net/abcdef</a></div></td>
                         </tr>
                         <tr>
                           <td>PureCycle Ventures</td>
                           <td class="font-weight-bold">Alberta</td>
                           <td>Canada</td>
-                          <td class="font-weight-medium"><div class="badge badge-warning">Pending</div></td>
+                          <td class="font-weight-medium"><a href="http://samplewebsite.org/98765">http://samplewebsite.org/98765</a></div></td>
                         </tr>
                         <tr>
                           <td>EcoRevive Technologies</td>
                           <td class="font-weight-bold">Dhaka</td>
                           <td>Bangladesh</td>
-                          <td class="font-weight-medium"><div class="badge badge-warning">Pending</div></td>
+                          <td class="font-weight-medium"><a href="http://placeholderlink.com/qwerty">http://placeholderlink.com/qwerty</a></div></td>
                         </tr>
                         <tr>
                           <td>OceanGuard Recyclers</td>
                           <td class="font-weight-bold">Chittagong</td>
                           <td>Bangladesh</td>
-                          <td class="font-weight-medium"><div class="badge badge-danger">Cancelled</div></td>
+                          <td class="font-weight-medium"><a href="http://testsite.net/xyz123">http://testsite.net/xyz123</a></div></td>
                         </tr>
                         <tr>
                           <td>SustainablePoly Recovery</td>
                           <td class="font-weight-bold">Lombardy</td>
                           <td>Italy</td>
-                          <td class="font-weight-medium"><div class="badge badge-warning">Pending</div></td>
+                          <td class="font-weight-medium"><a href="http://example.com/12345">http://example.com/12345</a></div></td>
                         </tr>
                         <tr>
                           <td>EnviroLoop Plastics</td>
                           <td class="font-weight-bold">Sao Paulo</td>
                           <td>Brazil</td>
-                          <td class="font-weight-medium"><div class="badge badge-success">Completed</div></td>
+                          <td class="font-weight-medium"><a href="http://dummylink.net/abcdef">http://dummylink.net/abcdef</a></div></td>
                         </tr>
                       </tbody>
                     </table>
@@ -610,7 +616,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-5 grid-margin stretch-card">
+            <!-- <div class="col-md-5 grid-margin stretch-card">
 							<div class="card">
 								<div class="card-body">
 									<h4 class="card-title">To Do Lists</h4>
@@ -665,7 +671,7 @@
                   </div>
                   <div class="add-items d-flex mb-0 mt-2">
 										<input type="text" class="form-control todo-list-input"  placeholder="Add new task">
-										<button class="add btn btn-icon text-primary todo-list-add-btn bg-transparent"><i class="icon-circle-plus"></i></button>
+										<button class="add btn btn-icon text-primary todo-list-add-btn bg-transparent"><i class="icon-circle-plus"></i></button> -->
 
             </div>
           <div class="row">
@@ -690,6 +696,36 @@
   <!-- Custom js for this page-->
   <script src="js/dashboard.js"></script>
   <script src="js/Chart.roundedBarCharts.js"></script>
+  <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("data-include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("data-include-html");
+              includeHTML();
+            }
+          } 
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
+        }
+      }
+    }
+    </script>
+    
   <!-- End custom js for this page-->
 </body>
 

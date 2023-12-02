@@ -11,6 +11,8 @@ var inject = require('gulp-inject');
 var sourcemaps = require('gulp-sourcemaps');
 var concat = require('gulp-concat');
 var merge = require('merge-stream');
+var fileinclude = require('gulp-file-include'),
+  gulp = require('gulp');
 
 gulp.paths = {
     dist: 'dist',
@@ -18,6 +20,15 @@ gulp.paths = {
 
 var paths = gulp.paths;
 
+
+gulp.task('fileinclude', function() {
+    gulp.src(['index.html'])
+      .pipe(fileinclude({
+        prefix: '@@',
+        basepath: '@file'
+      }))
+      .pipe(gulp.dest('./'));
+  });
 
 gulp.task('sass', function () {
     return gulp.src('./scss/**/style.scss')
