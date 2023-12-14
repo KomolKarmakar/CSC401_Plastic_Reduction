@@ -111,9 +111,12 @@
           </li>
           
         </ul>
-        
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
       </div>
     </nav>
+
     <div class="container-fluid page-body-wrapper">
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
@@ -124,16 +127,10 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
-              <i class="icon-bar-graph menu-icon"></i>
+            <a class="nav-link" href="../charts/chartjs.html">
+              <i class="icon-grid menu-icon"></i>
               <span class="menu-title">Analytics</span>
-              <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="charts">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="./pages/charts/chartjs.html"> User Graphs </a></li>
-              </ul>
-            </div>
           </li>
 
           <li class="nav-item">
@@ -144,16 +141,10 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#Contact_Us" aria-expanded="false" aria-controls="Contact_Us">
-              <i class="icon-columns menu-icon"></i>
-              <span class="menu-title">Contact Us</span>
-              <i class="menu-arrow"></i>
+            <a class="nav-link" href="../contact/service.html">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Customer Service</span>
             </a>
-            <div class="collapse" id="Contact_Us">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="pages/contact/service.html">Customer Service</a></li>
-              </ul>
-            </div>
           </li>
         </ul>
       </nav>
@@ -199,8 +190,9 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-8 grid-margin transparent">
+            <div class="col-md-12 grid-margin transparent">
                 <div class="row">
+                  <div class="card">
                   <div class="card-body">
                     <h4 class="card-title" style="font-size: 34px; color: teal; ">Campaigns Hosted:</h4>
                     <p class="font-weight-500" style="font-size: 16px;">
@@ -269,14 +261,81 @@
                       </table>
                     </div>
                   </div>
+                  </div>
                 </div>
             </div>
       </div>
-
+      
+      <div class="accordion" id="faqAccordion">
+        <div class="card">
+          <div class="card-header" id="faqHeading1">
+            <h5 class="mb-0">
+              Want to participate? Sign up to our newsletter via mail!
+            </h5>
+          </div>
+          <div class="card-body">
+            <!-- Add the checkbox here -->
+            <div class="form-check" style="display: flex; align-items: center;">
+              <label class="form-check-label" for="newsletterCheckbox" style="margin-right: 10px;">
+                Sign up for our newsletter
+              </label>
+              <input type="checkbox" class="form-check-input" id="newsletterCheckbox" onclick="showThankYouMessage()">
+            </div>
+            <div id="faqCollapse1" class="collapse show" aria-labelledby="faqHeading1" data-parent="#faqAccordion">
+              <div class="card-body">
+                For further inquiry:<br> Send us an Email at - ecomates@gmail.com
+                <br> <br>
+                <a href="https://www.facebook.com/ecomates1">Facebook</a>
+                <br>
+                <a href="https://www.instagram.com/ecomates1">Instagram</a>
+              </div>
+              <div id="thankYouMessage" style="display:none; margin-top: 10px;">
+                <p>Thank you for signing up!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <script>
+        function showThankYouMessage() {
+          var checkbox = document.getElementById("newsletterCheckbox");
+          var thankYouMessage = document.getElementById("thankYouMessage");
+      
+          if (checkbox.checked) {
+            // Checkbox is checked, show thank you message
+            thankYouMessage.style.display = "block";
+          } else {
+            // Checkbox is unchecked, hide thank you message
+            thankYouMessage.style.display = "none";
+          }
+        }
+      </script>
+      
 
     </div>
     </div>
   </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="../../vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="../../vendors/typeahead.js/typeahead.bundle.min.js"></script>
+  <script src="../../vendors/select2/select2.min.js"></script>
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="../../js/off-canvas.js"></script>
+  <script src="../../js/hoverable-collapse.js"></script>
+  <script src="../../js/template.js"></script>
+  <script src="../../js/settings.js"></script>
+  <script src="../../js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="../../js/file-upload.js"></script>
+  <script src="../../js/typeahead.js"></script>
+  <script src="../../js/select2.js"></script>
+  <!-- End custom js for this page-->
 </body>
 
 </html>
