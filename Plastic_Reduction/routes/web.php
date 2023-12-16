@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,8 +36,18 @@ Route::get('/feedback/rating', function () {
 })->name('rating');
 
 Route::get('/data/userTables', function () {
-    return view('data.userData');
+    $user = DB::table('tbluser') -> get();
+    $emp = DB::table('tblemployee') -> get();
+
+    return view('data.userData', ['user' => $user], ['emp' => $emp]);
 })->name('userData');
+
+Route::get('/data/userTables/submitUser', function(int $id, string $fname, string $lname, string $email, string $dob, string $street, string $city, string $state, int $zip){
+
+    DB::insert('insert into tbluser (id, fname, lname, email, dob, street, city, state, zip) values (?, ?. ?, ?, ?, ?, ?, ?, ?)', [$id, $fname, $lname, $email, $dob, $street, $city, $state, $zip]);
+
+
+})->name('userSubmit');
 
 Route::get('/login', function () {
     return view('login');
@@ -49,6 +60,7 @@ Route::get('/register', function () {
 Route::get('/campaign', function () {
     return view('campaign.campaign');
 })->name('camp');
+
 
 
 
